@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-cloud-netflix-zuul
+  zipkin:
+    base-url: http://localhost:8084
+server:
+  port: 8092
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /api/a/**
+      serviceId: SPRING-CLOUD-NETFLIX-WEB-ADMIN-RIBBON
+    api-b:
+      path: /api/b/**
+      serviceId: SPRING-CLOUD-NETFLIX-WEB-ADMIN-FEIGN

@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: spring-cloud-netflix-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/xiaoqiisnotxiaoqi/spring-cloud-config
+          search-paths: respo
+          username: xiaoqiisnotxiaoqi
+          password:
+  zipkin:
+    base-url: http://localhost:8084
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/

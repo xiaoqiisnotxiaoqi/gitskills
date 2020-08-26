@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-cloud-netflix-service-admin
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/

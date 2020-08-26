@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-cloud-netflix-web-admin-ribbon
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  zipkin:
+    base-url: http://localhost:8084
+server:
+  port: 8090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
